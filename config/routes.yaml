@@ -1,3 +1,23 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+fichas:
+    path: /fichas
+    controller: App\Controller\FichaController::index
+
+register:
+    path: /registro
+    controller: App\Controller\UserController::register
+
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+
+logout:
+    path: /logout
+    controller: App\Controller\UserController::logout
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+perfil:
+    path: /mi_perfil
+    controller: App\Controller\UserController::perfil

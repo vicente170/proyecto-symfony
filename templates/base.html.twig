@@ -2,11 +2,189 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Bienvenido!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block header %}
+            <!-- Navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ path('home') }}"><img class="img-responsive2"
+                                                                      src="assets/img/logo-delgado.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ path('home') }}">HOME</a></li>
+                            <li><a href="">NOSOTROS</a></li>
+                            <li><a href="">NOTICIAS</a></li>
+                            {% if app.user %}
+                            <li><a href= "{{ path('perfil') }}" class = "btn btn-default navbar-btn" style="color:black">MI PERFIL</a><li>
+                            {% else %}
+                            <li><a href= "{{ path('register') }}" class = "btn btn-default navbar-btn" style="color:black" >REGÍSTRATE</a></li>
+                            <li><a href= "{{ path('login') }}" class = "btn btn-default navbar-btn" style="color:black">INGRESAR</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
+
+        {% block body %}
+
+        {% endblock %}
+
+        {% block footer %}
+            <!-- Footer -->
+            <footer class="container-fluid bg-4 text-center">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>¡Transformando vidas a través de las oportunidades</h3>
+                        <img class="img-responsive2"
+                             src="assets/img/logo-transparente-chico.png">
+                        {% if app.user %}
+                            <h5>Bienvenid@ {{ app.user.name }}</h5>
+                            <a href= "{{ path('perfil') }}" class = "btn btn-default navbar-btn" style="background:whistsmoke">MI PERFIL</a>
+                            <a href= "{{ path('logout') }}" class = "btn btn-default navbar-btn" style="background:whistsmoke">CERRAR SESIÓN</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-2">
+
+                        <div class="vertical-menu">
+                            <h4>¿QUÉ HACEMOS?</h4>
+                            <a data-toggle="modal" data-target="#MisionModal" style="cursor:pointer">Misión</a>
+                            <a data-toggle="modal" data-target="#VisionModal" style="cursor:pointer">Visión</a>
+                            <a data-toggle="modal" data-target="#ValoresModal" style="cursor:pointer">Valores</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+
+                        <div class="vertical-menu">
+                            <h4>¿QUIÉNES SOMOS?</h4>
+                            <a href="#">Equipo</a>
+                            <a href="#">Nosotros</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+
+                        <div class="vertical-menu">
+                            <h4>TÉRMINOS LEGALES</h4>
+                            <a href="#">Términos y Condiciones</a>
+                            <a href="#">Política de Privacidad</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+
+                        <div class="vertical-menu">
+                            <h4>AYUDA</h4>
+                            <a href="#">Preguntas Frecuentes</a>
+                            <a href="#">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- MisionModal -->
+                <div id="MisionModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h2 class="modal-title" id="MyModalLabel" style="color:black">Misión</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p align="justify">Nos dedicamos a desarrollar soluciones a problemáticas en el ámbito de la salud y la rehabilitación, a
+                                través de desarrollos tecnológicos y la movilización de recursos que faciliten la accesibilidad a servicios
+                                eficientes y de alta calidad, contribuyendo a mejorar la calidad de vida de las personas, sus familias y el
+                                entorno</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- VisionModal -->
+                <div id="VisionModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content"  style="background:#0099cc">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h2 class="modal-title" id="MyModalLabel" style="color:whitesmoke">Visión</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p align="justify" style="color:whitesmoke">Lograr que la Salud y la Rehabilitación sean accesibles a todas las personas del mundo.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ValoresModal -->
+                <div id="ValoresModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog" >
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h2 class="modal-title" id="MyModalLabel" style="color:black">Valores</h2>
+                            </div>
+                            <div class="modal-body">
+                                <img width="100%" class="img-responsive2"
+                                     src="assets/img/valores_innovahope.gif">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <nav class="navbar navbar-footer">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">HOME</a></li>
+                                    <li><a href="#">NOSOTROS</a></li>
+                                    <li><a href="#">NOTICIAS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

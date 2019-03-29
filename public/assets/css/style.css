@@ -1,0 +1,270 @@
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px; }
+
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif; }
+
+body {
+
+    background-color: white;
+    line-height: 1.8;}
+
+/*Campos de input ocupando el 100% de la columna*/
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+    width:70%;
+    padding:8px;
+}
+
+label{
+    display:block;
+    width: 80%;
+    margin-top: 5px;
+    margin-top: 5px;
+}
+
+button,
+input[type="submit"]{
+    padding:15px;
+    margin-top:20px;
+    background: #0099cc;
+    border: 1px solid black;
+    color:white;
+    cursor:pointer;
+    transition: all 300ms;
+}
+
+button:hover,
+input[type="submit"]:hover{
+
+    background: #0099cc;}
+
+
+.bg-4 {
+    background-color: black;
+    color: #fff;
+}
+
+.navbar-brand {
+padding-top:0px;
+}
+.navbar {
+    padding-top: 5px;
+    padding-bottom:5px;
+    border: none;
+//border-color:transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+a.navbar-brand {
+    padding: 15px 20px; //adjust this accordingly until you have it centered.
+}
+
+a.navbar-btn{
+    background-color:#0099cc;
+    color: white;
+    border-radius: 20px;
+    padding:5px;
+}
+
+li{
+    padding:10px;
+}
+
+
+a.btn{
+    background-color:#0099cc;
+    color:white;
+}
+a{
+    font-size: 14px;
+    /*color:white;*/
+}
+
+a:hover{
+    color:black;
+}
+
+.vertical-menu {
+    width: auto;
+    height:150px;
+    padding-right:15px;
+//border-right:1px solid whitesmoke;
+}
+
+@media screen and (min-width:800px){
+    .vertical-menu {
+        border-right:1px solid whitesmoke;
+    }
+}
+
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.vertical-menu a {
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.vertical-menu h4{
+    font-size:17px;
+    color:whitesmoke
+}
+p{
+     color:black;
+ }
+
+h2{
+    color:black;
+}
+
+.modal-content{
+    /*border-radius: 2px;*/
+    border:5px solid #0099cc !important;
+}
+
+@media (max-width: 768px) {
+    a.navbar-brand
+    {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+}
+/*
+
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+
+p {font-size: 16px;}
+.margin {margin-bottom: 45px;}
+.bg-1 {
+//background-color: #1abc9c; !* Green *!
+    color: #ffffff;
+    background-image: url('../img/banner-home-2.jpg');
+}
+.bg-2 {
+    background-color: #474e5d; !* Dark Blue *!
+    color: #ffffff;
+}
+.bg-3 {
+    background-color: #ffffff; !* White *!
+    color: #555555;
+}
+.bg-4 {
+    background-color: black; !* Black Gray *!
+    color: #fff;
+}
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+.container-fluid-2 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border: none;
+//border-color:transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-footer{
+    background-color: black;
+}
+
+.nav > li > a:hover{
+    background-color:black;
+}
+
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+    background-color:black;
+}
+.navbar-nav{
+    padding-top: 5px;
+}
+.navbar-brand{
+    padding-top:0px;
+}
+.navbar-btn{
+    background-color:#0099cc;color: whitesmoke;border-radius: 16px;
+}
+
+.vertical-menu {
+    width: auto;
+    height:150px;
+    padding-right:15px;
+//border-right:1px solid whitesmoke;!* Set a width if you like *!
+}
+
+@media screen and (min-width:800px){
+    .vertical-menu {
+        border-right:1px solid whitesmoke;!* Borde solo en desktop *!
+    }
+}
+
+.vertical-menu a {
+    display: block; !* Make the links appear below each other *!
+    padding: 3px; !* Add some padding *!
+    text-decoration: none;
+    font-size: 15px;!* Remove underline from links *!
+}
+.form {
+    border: 2px solid black;
+    border-radius: 16px;
+
+}
+
+
+
+.input[type=radio] {
+    padding:15px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+.btn{
+    background-color:#0099cc;
+}
+
+.label { float: left; }
+
+.form-group{
+    text-align: left;
+    padding:10px;
+}
+
+
+
+
+!*
+.col-xs-6{
+    padding-left:100px;
+    padding-right:100px;
+}*!
+*/

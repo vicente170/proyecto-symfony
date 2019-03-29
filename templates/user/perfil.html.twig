@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registro de Usarios{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+
+
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+                <h1 style="text-align: center">MI PERFIL</h1>
+                <img  style="border-radius: 50%" width="100%" class="img-responsivep"
+                     src="assets/img/imagenPerfil.jpg">
+                <a href="" >Editar Perfil</a>
+            </div>
+            <div class="col-md-3">
+                <p>Nombre completo</p>
+                <strong>{{ app.user.name|upper }} {{ app.user.surname|upper }}</strong>
+                <br><br>
+                <p>Correo Electrónico</p>
+                <strong>{{ app.user.email }}</strong>
+                <br><br>
+                <p>Fecha de Nacimiento</p>
+                <strong>15 de Septiembre de 1987</strong>
+                <br><br>
+                <p>Dirección</p>
+                <strong>La Pastora 212</strong>
+                <br><br>
+                <p>Comuna / Ciudad / País</p>
+                <strong>Las Condes / Santiago / Chile</strong>
+            </div>
+            <div class="col-md-3">
+                <p style="text-align: right">Nombre completo</p>
+                <p style="font-weight: bold; text-align:right">Matías Voigt</p>
+
+                <p style="text-align: right">Correo Electrónico</p>
+                <p style="font-weight: bold; text-align:right">mvoigt@innovahope.com</p>
+
+                <p style="text-align: right">Fecha de Nacimiento</p>
+                <p style="font-weight: bold; text-align:right">15 de Octubre de 1987</p>
+
+                <p style="text-align: right">Dirección</p>
+                <p style="font-weight: bold; text-align:right">La Pastora 212</p>
+
+                <p style="text-align: right">Comuna / Ciudad / País</p>
+                <p style="font-weight: bold; text-align:right">Las Condes / Santiago / Chile</p>
+            </div>
+            <div class="col-md-2">
+                <strong style="text-align:left; font-size:16px">Kinesiólogo Asignado</strong>
+                <br></br>
+                <img  style="border-radius: 50%" width="70%" class="img-responsivep"
+                      src="assets/img/matias.PNG">
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

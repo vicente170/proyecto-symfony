@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ingresar a MI PERFIL{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+
+
+        {% if error %}
+            <div class="alert alert-error">
+                {{ error.messagekey|trans(error.messageData,'security') }}
+            </div>
+
+        {% endif %}
+
+        {% if app.user %}
+            <p>Ya estás loguead@</p>
+        {% else %}
+            <h1>Ingresar a MI PERFIL ✅</h1>
+            <form action="{{ path('login') }}" method="POST">
+                <label for="username">Correo electrónico</label>
+                <input type="email" id="username" name="_username" value="{{ last_username }}"/>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="_password"/>
+                <br>
+                <input type="submit" value="Entrar a MI PERFIL"/>
+            </form>
+        {% endif %}
+
+
+
+    </div>
+{% endblock %}
