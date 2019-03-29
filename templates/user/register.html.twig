@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MI PERFIL{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+        {% if app.user %}
+        <p>Ya estás loguead@</p>
+        {% else %}
+
+                <h1>Registro de Usuarios ✅</h1>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+
+        {% endif %}
+    </div>
+{% endblock %}
